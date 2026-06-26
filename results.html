@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Result Portal</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#eef5ff;
+    padding:20px;
+}
+
+.container{
+    max-width:900px;
+    margin:auto;
+}
+
+.search-box{
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 0 15px rgba(0,0,0,0.1);
+    text-align:center;
+}
+
+.search-box h1{
+    color:#004aad;
+    margin-bottom:20px;
+}
+
+input{
+    width:90%;
+    padding:12px;
+    margin:10px;
+    border:1px solid #ccc;
+    border-radius:8px;
+}
+
+button{
+    background:#004aad;
+    color:white;
+    border:none;
+    padding:12px 25px;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#003080;
+}
+
+.result-card{
+    display:none;
+    margin-top:25px;
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 0 15px rgba(0,0,0,0.1);
+}
+
+.header{
+    text-align:center;
+    margin-bottom:20px;
+}
+
+.header h2{
+    color:#004aad;
+}
+
+.info{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:10px;
+    margin-bottom:20px;
+}
+
+.info div{
+    background:#f5f9ff;
+    padding:10px;
+    border-radius:8px;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:15px;
+}
+
+table th{
+    background:#004aad;
+    color:white;
+}
+
+table th,table td{
+    border:1px solid #ccc;
+    padding:10px;
+    text-align:center;
+}
+
+.summary{
+    margin-top:20px;
+    padding:15px;
+    background:#f5f9ff;
+    border-radius:10px;
+}
+
+.pass{
+    color:green;
+    font-size:22px;
+    font-weight:bold;
+    text-align:center;
+    margin-top:15px;
+}
+
+.footer{
+    text-align:center;
+    margin-top:20px;
+}
+
+.print-btn{
+    background:green;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="search-box">
+
+<h1>🎓 Student Result Portal</h1>
+
+<input type="text" id="regno" placeholder="Enter Register Number">
+
+<input type="date" id="dob">
+
+<br><br>
+
+<button onclick="showResult()">View Result</button>
+
+</div>
+
+<div class="result-card" id="result">
+
+<div class="header">
+<h2>Semester Examination Result</h2>
+</div>
+
+<div class="info">
+
+<div><b>Register No:</b> <span id="reg"></span></div>
+
+<div><b>Student Name:</b> <span id="studentName"></span></div>
+
+<div><b>Department:</b> <span id="department"></span></div>
+
+<div><b>Semester:</b> <span id="semester"></span></div>
+
+</div>
+
+<table>
+
+<tr>
+<th>Subject</th>
+<th>Marks</th>
+<th>Grade</th>
+</tr>
+
+<tbody id="marksTable">
+
+</tbody>
+
+</table>
+
+<div class="summary">
+
+<p><b>Total Marks:</b> <span id="total"></span> / 500</p>
+
+<p><b>Percentage:</b> <span id="percentage"></span></p>
+
+<p><b>CGPA:</b> <span id="cgpa"></span></p>
+
+</div>
+
+<div class="pass">
+
+<span id="status"></span>
+
+</div>
+
+<div class="footer">
+
+<button class="print-btn" onclick="window.print()">
+
+🖨️ Print Result
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<script src="results.js"></script>
+
+</body>
+</html>
