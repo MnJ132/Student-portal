@@ -1,7 +1,7 @@
 const students = {
 
-    "230100000001": {
-        dob: "2005-01-15",
+    "950825104010": {
+        dob: "2008-08-23",
         name: "ATCHAYA R",
         department: "Information Technology",
         semester: "V Semester",
@@ -20,9 +20,9 @@ const students = {
         result:"PASS"
     },
 
-    "230100000002": {
-        dob: "2005-03-20",
-        name: "RAHUL K",
+    "950825104032": {
+        dob: "2007-07-04",
+        name: "MANJU N",
         department: "Computer Science",
         semester: "V Semester",
 
@@ -40,9 +40,9 @@ const students = {
         result:"PASS"
     },
 
-    "230100000003": {
-        dob: "2005-05-08",
-        name: "PRIYA S",
+    "950825104038": {
+        dob: "2008-03-21",
+        name: "PAVITHRA S",
         department: "Electronics",
         semester: "V Semester",
 
