@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Dashboard</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#eef5ff;
+}
+
+header{
+    background:#004aad;
+    color:white;
+    padding:20px;
+    text-align:center;
+}
+
+.container{
+    max-width:900px;
+    margin:30px auto;
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 0 10px rgba(0,0,0,.15);
+}
+
+.container h2{
+    color:#004aad;
+    margin-bottom:20px;
+}
+
+input{
+    width:100%;
+    padding:12px;
+    margin:10px 0;
+    border:1px solid #ccc;
+    border-radius:8px;
+}
+
+button{
+    width:100%;
+    padding:14px;
+    background:#004aad;
+    color:white;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:16px;
+}
+
+button:hover{
+    background:#003080;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<h1>🎓 Student Portal Admin</h1>
+
+</header>
+
+<div class="container">
+
+<h2>Add Student</h2>
+
+<input id="regno" placeholder="Register Number">
+
+<input id="name" placeholder="Student Name">
+
+<input id="dob" type="date">
+
+<input id="department" placeholder="Department">
+
+<input id="semester" placeholder="Semester">
+
+<input id="cgpa" placeholder="CGPA">
+
+<input id="percentage" placeholder="Percentage">
+
+<input id="total" placeholder="Total Marks">
+
+<input id="result" placeholder="PASS / FAIL">
+
+<button onclick="saveStudent()">
+
+Save Student
+
+</button>
+
+</div>
+
+<script type="module" src="js/admin-dashboard.js"></script>
+
+</body>
+</html>
