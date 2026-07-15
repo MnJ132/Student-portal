@@ -1,0 +1,97 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, sans-serif;
+    background:linear-gradient(#fff5f8,#ffeef5);
+}
+
+header{
+    background:white;
+    padding:20px;
+    text-align:center;
+    border-bottom:3px solid #c2185b;
+}
+
+header h1{
+    color:#8b004f;
+}
+
+nav{
+    background:#b01257;
+    padding:15px;
+    text-align:center;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:15px;
+    font-weight:bold;
+}
+
+.hero{
+    text-align:center;
+    padding:60px 20px;
+    background:url('https://via.placeholder.com/1200x400');
+    background-size:cover;
+}
+
+.hero h1{
+    color:#8b004f;
+    font-size:50px;
+}
+
+.hero h2{
+    color:#b01257;
+    margin-top:10px;
+}
+
+.hero button{
+    margin-top:20px;
+    padding:12px 25px;
+    border:none;
+    background:#e91e63;
+    color:white;
+    border-radius:30px;
+}
+
+.cards{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:20px;
+    padding:30px;
+}
+
+.card{
+    width:250px;
+    background:white;
+    padding:20px;
+    border-radius:15px;
+    box-shadow:0 0 10px #ddd;
+    text-align:center;
+}
+
+.card h3{
+    color:#b01257;
+}
+
+.section{
+    background:white;
+    margin:20px;
+    padding:20px;
+    border-radius:15px;
+    box-shadow:0 0 10px #ddd;
+}
+
+footer{
+    background:#b01257;
+    color:white;
+    text-align:center;
+    padding:15px;
+    margin-top:20px;
+}
