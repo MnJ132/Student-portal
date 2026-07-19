@@ -1,94 +1,224 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Student Result Portal</title>
- <link rel="stylesheet" href="css/results.css">
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Results | Student Portal</title>
+
+    <link rel="stylesheet" href="css/results.css">
 
 </head>
 
 <body>
 
-<div class="container">
 
-<div class="search-box">
+<header>
 
-<h1>🎓 Student Result Portal</h1>
+    <h1>ANNA UNIVERSITY</h1>
 
-<input type="text" id="regno" placeholder="Enter Register Number">
+    <h2>STUDENT PORTAL</h2>
 
-<input type="date" id="dob">
+</header>
 
-<br><br>
 
-<button onclick="showResult()">View Result</button>
+<nav>
 
-</div>
+    <div class="nav-logo">
+        🎓 Student Portal
+    </div>
 
-<div class="result-card" id="result">
 
-<div class="header">
-<h2>Semester Examination Result</h2>
-</div>
+    <div class="nav-links">
 
-<div class="info">
+        <a href="index.html">
+            Home
+        </a>
 
-<div><b>Register No:</b> <span id="reg"></span></div>
+        <a href="about.html">
+            About Us
+        </a>
 
-<div><b>Student Name:</b> <span id="studentName"></span></div>
+        <a href="academics.html">
+            Academics
+        </a>
 
-<div><b>Department:</b> <span id="department"></span></div>
+        <a href="results.html" class="active">
+            Results
+        </a>
 
-<div><b>Semester:</b> <span id="semester"></span></div>
+        <a href="contact.html">
+            Contact
+        </a>
 
-</div>
+    </div>
 
-<table>
+</nav>
 
-<tr>
-<th>Subject</th>
-<th>Marks</th>
-<th>Grade</th>
-</tr>
 
-<tbody id="marksTable">
+<section class="results-hero">
 
-</tbody>
+    <h1>Check Your Results</h1>
 
-</table>
+    <p>
+        Enter your register number and date of birth
+        to securely view your academic results.
+    </p>
 
-<div class="summary">
+</section>
 
-<p><b>Total Marks:</b> <span id="total"></span> / 500</p>
 
-<p><b>Percentage:</b> <span id="percentage"></span></p>
+<main class="results-container">
 
-<p><b>CGPA:</b> <span id="cgpa"></span></p>
 
-</div>
+    <section class="result-login-card">
 
-<div class="pass">
+        <div class="result-icon">
+            📊
+        </div>
 
-<span id="status"></span>
+        <h2>Student Result Portal</h2>
 
-</div>
+        <p class="form-description">
+            Enter your details to access your semester performance.
+        </p>
 
-<div class="footer">
 
-<button class="print-btn" onclick="window.print()">
+        <div class="form-group">
 
-🖨️ Print Result
+            <label for="regno">
+                Register Number
+            </label>
 
-</button>
+            <input
+                type="text"
+                id="regno"
+                placeholder="Enter your register number"
+            >
 
-</div>
+        </div>
 
-</div>
 
-</div>
+        <div class="form-group">
 
-<script type="module" src="js/results.js"></script>
+            <label for="dob">
+                Date of Birth
+            </label>
+
+            <input
+                type="date"
+                id="dob"
+            >
+
+        </div>
+
+
+        <button onclick="showResult()">
+            View Results
+        </button>
+
+    </section>
+
+
+    <section
+        id="result"
+        class="result-card"
+        style="display: none;"
+    >
+
+        <div class="result-header">
+
+            <h2>Academic Result</h2>
+
+            <span>🎓</span>
+
+        </div>
+
+
+        <div class="student-info">
+
+            <div class="info-item">
+
+                <span>Register Number</span>
+
+                <strong id="reg"></strong>
+
+            </div>
+
+
+            <div class="info-item">
+
+                <span>Student Name</span>
+
+                <strong id="studentName"></strong>
+
+            </div>
+
+
+            <div class="info-item">
+
+                <span>Department</span>
+
+                <strong id="department"></strong>
+
+            </div>
+
+
+            <div class="info-item">
+
+                <span>Semester</span>
+
+                <strong id="semester"></strong>
+
+            </div>
+
+        </div>
+
+
+        <div class="performance-section">
+
+            <div class="performance-box">
+
+                <span>Percentage</span>
+
+                <strong id="percentage"></strong>
+
+            </div>
+
+
+            <div class="performance-box">
+
+                <span>CGPA</span>
+
+                <strong id="cgpa"></strong>
+
+            </div>
+
+        </div>
+
+
+    </section>
+
+
+</main>
+
+
+<footer>
+
+    © 2026 Anna University Student Portal
+
+</footer>
+
+
+<script
+    type="module"
+    src="results.js"
+></script>
+
 
 </body>
+
 </html>

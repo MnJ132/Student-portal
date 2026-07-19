@@ -201,35 +201,97 @@ footer {
     margin-top: 60px;
 }
 
-
 /* =========================
-   RESPONSIVE DESIGN
+   MOBILE RESPONSIVE DESIGN
 ========================= */
 
 @media (max-width: 600px) {
 
+    /* Navigation */
+
     nav {
         flex-direction: column;
-        gap: 15px;
+        gap: 18px;
+        padding: 18px 20px;
     }
-.feature-grid {
-    grid-template-columns: 1fr;
-}
-.mission-section {
-    grid-template-columns: 1fr;
-}
+
     .nav-links {
         flex-wrap: wrap;
         justify-content: center;
-        gap: 15px;
+        gap: 14px 20px;
     }
 
+
+    /* About Hero */
+
     .about-hero {
-        padding: 60px 20px;
+        padding: 55px 20px;
     }
+
+    .about-hero h1 {
+        font-size: 2.5rem;
+        line-height: 1.2;
+    }
+
+    .about-hero p {
+        font-size: 1rem;
+    }
+
+
+    /* Main Container */
+
+    .about-container {
+        margin: 35px auto;
+        padding: 0 16px;
+    }
+
+
+    /* About Cards */
 
     .about-card {
         padding: 25px 20px;
+        margin-bottom: 20px;
+    }
+
+
+    /* Feature Cards */
+
+    .feature-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .feature-item {
+        padding: 25px 20px;
+    }
+
+
+    /* Mission and Vision */
+
+    .mission-section {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .mission-card {
+        padding: 35px 25px;
+    }
+
+    .mission-card h2 {
+        font-size: 1.8rem;
+    }
+
+    .mission-card p {
+        font-size: 1rem;
+        line-height: 1.7;
+    }
+
+
+    /* Footer */
+
+    footer {
+        padding: 22px 15px;
+        font-size: 0.9rem;
     }
 
 }
