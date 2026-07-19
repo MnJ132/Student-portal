@@ -1,28 +1,308 @@
-.container{
-    display:flex;
-    flex-wrap:wrap;
-    gap:20px;
-    justify-content:center;
+/* =========================
+   GLOBAL RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.card{
-    width:300px;
-    background:white;
-    border:2px solid #ddd;
-    border-radius:12px;
-    overflow:hidden;
-    box-shadow:0 4px 8px rgba(0,0,0,0.1);
+body {
+    font-family: Arial, sans-serif;
+    background: #f8f7fc;
+    color: #1f2937;
 }
 
-.card h2{
-    margin:0;
-    padding:15px;
-    background:#0077cc;
-    color:white;
-    text-align:center;
-    font-size:20px;
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+    background: white;
+    padding: 25px 20px;
+    text-align: center;
+    border-bottom: 1px solid #e5e7eb;
 }
 
-.card-content{
-    padding:15px;
+header h1 {
+    color: #8b1458;
+    font-size: 2rem;
+    letter-spacing: 1px;
+}
+
+header h2 {
+    color: #111827;
+    font-size: 1.1rem;
+    margin-top: 5px;
+    letter-spacing: 2px;
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+nav {
+    background: #8b1458;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 16px 8%;
+}
+
+.nav-logo {
+    color: white;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+}
+
+.nav-links a::after {
+    content: "";
+
+    position: absolute;
+
+    width: 0;
+    height: 2px;
+
+    background: white;
+
+    left: 0;
+    bottom: -6px;
+
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.nav-links a.active {
+    color: #ffd1e5;
+}
+
+
+/* =========================
+   ACADEMICS HERO
+========================= */
+
+.academics-hero {
+    text-align: center;
+
+    padding: 80px 20px;
+
+    background: linear-gradient(
+        135deg,
+        #fff1f7,
+        #f8f7fc
+    );
+}
+
+.academics-hero h1 {
+    color: #8b1458;
+
+    font-size: clamp(2.5rem, 5vw, 4rem);
+
+    margin-bottom: 15px;
+}
+
+.academics-hero p {
+    max-width: 650px;
+
+    margin: auto;
+
+    color: #6b7280;
+
+    font-size: 1.1rem;
+
+    line-height: 1.7;
+}
+
+
+/* =========================
+   ACADEMIC CARDS
+========================= */
+
+.academics-container {
+    max-width: 1100px;
+
+    margin: 60px auto;
+
+    padding: 0 25px;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 25px;
+}
+
+.academic-card {
+    background: white;
+
+    padding: 35px;
+
+    border-radius: 16px;
+
+    border: 1px solid #e5e7eb;
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
+
+    transition: all 0.3s ease;
+}
+
+.academic-card:hover {
+    transform: translateY(-6px);
+
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
+}
+
+
+/* =========================
+   ACADEMIC ICONS
+========================= */
+
+.academic-icon {
+    width: 65px;
+    height: 65px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 20px;
+
+    background: #fff1f7;
+
+    border-radius: 50%;
+
+    font-size: 2rem;
+
+    transition: all 0.3s ease;
+}
+
+.academic-card:hover .academic-icon {
+    transform: scale(1.1) rotate(5deg);
+
+    background: #fce4ec;
+}
+
+
+/* =========================
+   CARD CONTENT
+========================= */
+
+.academic-card h2 {
+    color: #8b1458;
+
+    margin-bottom: 15px;
+}
+
+.academic-card p {
+    color: #6b7280;
+
+    line-height: 1.8;
+
+    margin-bottom: 8px;
+}
+
+.academic-card ul {
+    padding-left: 20px;
+
+    color: #6b7280;
+
+    line-height: 2;
+}
+
+
+/* =========================
+   NOTICE CARD
+========================= */
+
+.notice-card {
+    grid-column: span 2;
+
+    background: linear-gradient(
+        135deg,
+        #8b1458,
+        #b51f70
+    );
+
+    color: white;
+}
+
+.notice-card h2 {
+    color: white;
+}
+
+.notice-card p {
+    color: #ffeaf3;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background: #111827;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 25px;
+
+    margin-top: 60px;
+}
+
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 700px) {
+
+    nav {
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        gap: 15px;
+    }
+
+    .academics-hero {
+        padding: 60px 20px;
+    }
+
+    .academics-container {
+        grid-template-columns: 1fr;
+    }
+
+    .notice-card {
+        grid-column: span 1;
+    }
+
 }
