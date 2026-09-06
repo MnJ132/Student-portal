@@ -16,6 +16,10 @@
 <body>
 
 
+<!-- =========================
+     UNIVERSITY HEADER
+========================= -->
+
 <header>
 
     <h1>ANNA UNIVERSITY</h1>
@@ -25,14 +29,30 @@
 </header>
 
 
+<!-- =========================
+     NAVIGATION
+========================= -->
+
 <nav>
 
-    <div class="nav-logo">
-        🎓 Student Portal
+    <div class="nav-top">
+
+        <div class="nav-logo">
+            🎓 Student Portal
+        </div>
+
+        <button
+            class="menu-toggle"
+            id="menuToggle"
+            aria-label="Open navigation menu"
+        >
+            ☰
+        </button>
+
     </div>
 
 
-    <div class="nav-links">
+    <div class="nav-links" id="navLinks">
 
         <a href="index.html">
             Home
@@ -59,9 +79,15 @@
 </nav>
 
 
+<!-- =========================
+     RESULTS HERO
+========================= -->
+
 <section class="results-hero">
 
-    <h1>Check Your Results</h1>
+    <h1>
+        Check Your Results
+    </h1>
 
     <p>
         Enter your register number and date of birth
@@ -71,8 +97,14 @@
 </section>
 
 
+<!-- =========================
+     RESULTS CONTENT
+========================= -->
+
 <main class="results-container">
 
+
+    <!-- RESULT LOGIN -->
 
     <section class="result-login-card">
 
@@ -80,7 +112,9 @@
             📊
         </div>
 
-        <h2>Student Result Portal</h2>
+        <h2>
+            Student Result Portal
+        </h2>
 
         <p class="form-description">
             Enter your details to access your semester performance.
@@ -123,6 +157,10 @@
     </section>
 
 
+    <!-- =========================
+         RESULT DISPLAY
+    ========================= -->
+
     <section
         id="result"
         class="result-card"
@@ -131,18 +169,27 @@
 
         <div class="result-header">
 
-            <h2>Academic Result</h2>
+            <h2>
+                Academic Result
+            </h2>
 
-            <span>🎓</span>
+            <span>
+                🎓
+            </span>
 
         </div>
 
 
+        <!-- STUDENT INFORMATION -->
+
         <div class="student-info">
+
 
             <div class="info-item">
 
-                <span>Register Number</span>
+                <span>
+                    Register Number
+                </span>
 
                 <strong id="reg"></strong>
 
@@ -151,7 +198,9 @@
 
             <div class="info-item">
 
-                <span>Student Name</span>
+                <span>
+                    Student Name
+                </span>
 
                 <strong id="studentName"></strong>
 
@@ -160,7 +209,9 @@
 
             <div class="info-item">
 
-                <span>Department</span>
+                <span>
+                    Department
+                </span>
 
                 <strong id="department"></strong>
 
@@ -169,20 +220,28 @@
 
             <div class="info-item">
 
-                <span>Semester</span>
+                <span>
+                    Semester
+                </span>
 
                 <strong id="semester"></strong>
 
             </div>
 
+
         </div>
 
 
+        <!-- PERFORMANCE -->
+
         <div class="performance-section">
+
 
             <div class="performance-box">
 
-                <span>Percentage</span>
+                <span>
+                    Percentage
+                </span>
 
                 <strong id="percentage"></strong>
 
@@ -191,11 +250,14 @@
 
             <div class="performance-box">
 
-                <span>CGPA</span>
+                <span>
+                    CGPA
+                </span>
 
                 <strong id="cgpa"></strong>
 
             </div>
+
 
         </div>
 
@@ -206,6 +268,10 @@
 </main>
 
 
+<!-- =========================
+     FOOTER
+========================= -->
+
 <footer>
 
     © 2026 Anna University Student Portal
@@ -213,10 +279,16 @@
 </footer>
 
 
+<!-- =========================
+     JAVASCRIPT
+========================= -->
+
 <script
     type="module"
-    src="results.js"
+    src="js/results.js"
 ></script>
+
+<script src="js/menu.js"></script>
 
 
 </body>

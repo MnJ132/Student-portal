@@ -8,10 +8,18 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: Arial, sans-serif;
+
     background: #f8f7fc;
+
     color: #1f2937;
+
+    overflow-x: hidden;
 }
 
 
@@ -20,22 +28,33 @@ body {
 ========================= */
 
 header {
+
     background: white;
+
     padding: 25px 20px;
+
     text-align: center;
+
     border-bottom: 1px solid #e5e7eb;
 }
 
 header h1 {
+
     color: #8b1458;
+
     font-size: 2rem;
+
     letter-spacing: 1px;
 }
 
 header h2 {
+
     color: #111827;
+
     font-size: 1.1rem;
+
     margin-top: 5px;
+
     letter-spacing: 2px;
 }
 
@@ -45,55 +64,126 @@ header h2 {
 ========================= */
 
 nav {
+
     background: #8b1458;
 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    padding: 0 8%;
 
-    padding: 16px 8%;
+    position: relative;
 }
 
+
+/* Top row */
+
+.nav-top {
+
+    min-height: 62px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+
+/* Logo */
+
 .nav-logo {
+
     color: white;
+
     font-size: 1.1rem;
+
     font-weight: bold;
 }
 
+
+/* =========================
+   NAVIGATION LINKS
+========================= */
+
 .nav-links {
+
     display: flex;
+
+    align-items: center;
+
+    justify-content: flex-end;
+
     gap: 30px;
 }
 
 .nav-links a {
+
     color: white;
+
     text-decoration: none;
+
     font-weight: bold;
+
     position: relative;
+
+    padding: 22px 0;
 }
 
+
+/* Underline */
+
 .nav-links a::after {
+
     content: "";
 
     position: absolute;
 
     width: 0;
+
     height: 2px;
 
     background: white;
 
     left: 0;
-    bottom: -6px;
+
+    bottom: 14px;
 
     transition: width 0.3s ease;
 }
 
 .nav-links a:hover::after {
+
     width: 100%;
 }
 
+
+/* Active page */
+
 .nav-links a.active {
+
     color: #ffd1e5;
+}
+
+
+/* =========================
+   HAMBURGER
+========================= */
+
+.menu-toggle {
+
+    display: none;
+
+    background: transparent;
+
+    border: none;
+
+    color: white;
+
+    font-size: 28px;
+
+    cursor: pointer;
+
+    padding: 5px;
+
+    line-height: 1;
 }
 
 
@@ -102,6 +192,7 @@ nav {
 ========================= */
 
 .academics-hero {
+
     text-align: center;
 
     padding: 80px 20px;
@@ -114,14 +205,22 @@ nav {
 }
 
 .academics-hero h1 {
+
     color: #8b1458;
 
-    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-size: clamp(
+        2.5rem,
+        5vw,
+        4rem
+    );
 
     margin-bottom: 15px;
+
+    line-height: 1.15;
 }
 
 .academics-hero p {
+
     max-width: 650px;
 
     margin: auto;
@@ -139,6 +238,7 @@ nav {
 ========================= */
 
 .academics-container {
+
     max-width: 1100px;
 
     margin: 60px auto;
@@ -153,6 +253,7 @@ nav {
 }
 
 .academic-card {
+
     background: white;
 
     padding: 35px;
@@ -161,15 +262,20 @@ nav {
 
     border: 1px solid #e5e7eb;
 
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.04);
 
-    transition: all 0.3s ease;
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
 }
 
 .academic-card:hover {
+
     transform: translateY(-6px);
 
-    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
+    box-shadow:
+        0 12px 25px rgba(0, 0, 0, 0.1);
 }
 
 
@@ -178,12 +284,15 @@ nav {
 ========================= */
 
 .academic-icon {
+
     width: 65px;
+
     height: 65px;
 
     display: flex;
 
     align-items: center;
+
     justify-content: center;
 
     margin-bottom: 20px;
@@ -198,7 +307,10 @@ nav {
 }
 
 .academic-card:hover .academic-icon {
-    transform: scale(1.1) rotate(5deg);
+
+    transform:
+        scale(1.1)
+        rotate(5deg);
 
     background: #fce4ec;
 }
@@ -209,12 +321,14 @@ nav {
 ========================= */
 
 .academic-card h2 {
+
     color: #8b1458;
 
     margin-bottom: 15px;
 }
 
 .academic-card p {
+
     color: #6b7280;
 
     line-height: 1.8;
@@ -223,6 +337,7 @@ nav {
 }
 
 .academic-card ul {
+
     padding-left: 20px;
 
     color: #6b7280;
@@ -236,6 +351,7 @@ nav {
 ========================= */
 
 .notice-card {
+
     grid-column: span 2;
 
     background: linear-gradient(
@@ -248,11 +364,26 @@ nav {
 }
 
 .notice-card h2 {
+
     color: white;
 }
 
 .notice-card p {
+
     color: #ffeaf3;
+}
+
+
+/* Keep notice icon visible */
+
+.notice-card .academic-icon {
+
+    background: rgba(
+        255,
+        255,
+        255,
+        0.15
+    );
 }
 
 
@@ -261,6 +392,7 @@ nav {
 ========================= */
 
 footer {
+
     background: #111827;
 
     color: white;
@@ -274,35 +406,196 @@ footer {
 
 
 /* =========================
-   RESPONSIVE DESIGN
+   TABLET
 ========================= */
 
-@media (max-width: 700px) {
+@media (max-width: 900px) {
+
+    .academics-container {
+
+        grid-template-columns: repeat(
+            2,
+            1fr
+        );
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+
+    /* -------------------------
+       HEADER
+    ------------------------- */
+
+    header {
+
+        padding: 22px 15px;
+    }
+
+    header h1 {
+
+        font-size: 1.55rem;
+    }
+
+    header h2 {
+
+        font-size: 0.95rem;
+    }
+
+
+    /* -------------------------
+       NAVIGATION
+    ------------------------- */
 
     nav {
-        flex-direction: column;
 
-        gap: 15px;
+        padding: 0 18px;
     }
+
+    .nav-top {
+
+        min-height: 58px;
+    }
+
+    .nav-logo {
+
+        font-size: 1rem;
+    }
+
+
+    /* Hamburger */
+
+    .menu-toggle {
+
+        display: block;
+    }
+
+
+    /* Hide links */
 
     .nav-links {
-        flex-wrap: wrap;
 
-        justify-content: center;
+        display: none;
 
-        gap: 15px;
+        width: 100%;
+
+        flex-direction: column;
+
+        gap: 0;
+
+        padding-bottom: 8px;
     }
 
+
+    /* Show links */
+
+    .nav-links.show {
+
+        display: flex;
+    }
+
+
+    /* Individual links */
+
+    .nav-links a {
+
+        width: 100%;
+
+        text-align: center;
+
+        padding: 13px 10px;
+
+        border-top:
+            1px solid
+            rgba(
+                255,
+                255,
+                255,
+                0.15
+            );
+    }
+
+
+    /* Remove desktop underline */
+
+    .nav-links a::after {
+
+        display: none;
+    }
+
+
+    /* -------------------------
+       HERO
+    ------------------------- */
+
     .academics-hero {
+
         padding: 60px 20px;
     }
 
-    .academics-container {
-        grid-template-columns: 1fr;
+    .academics-hero h1 {
+
+        font-size: 2.4rem;
+
+        line-height: 1.2;
     }
 
+    .academics-hero p {
+
+        font-size: 1rem;
+
+        line-height: 1.7;
+    }
+
+
+    /* -------------------------
+       ACADEMIC CARDS
+    ------------------------- */
+
+    .academics-container {
+
+        grid-template-columns: 1fr;
+
+        margin: 45px auto;
+
+        padding: 0 18px;
+
+        gap: 18px;
+    }
+
+    .academic-card {
+
+        padding: 28px 20px;
+
+        border-radius: 15px;
+    }
+
+
+    /* Notice becomes normal card */
+
     .notice-card {
+
         grid-column: span 1;
+    }
+
+
+    /* -------------------------
+       FOOTER
+    ------------------------- */
+
+    footer {
+
+        padding: 22px 15px;
+
+        font-size: 0.9rem;
+
+        margin-top: 40px;
     }
 
 }

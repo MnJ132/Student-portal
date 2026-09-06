@@ -8,34 +8,47 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: Arial, sans-serif;
     background: #f8f7fc;
     color: #1f2937;
+    overflow-x: hidden;
 }
 
 
 /* =========================
-   HEADER
+   UNIVERSITY HEADER
 ========================= */
 
 header {
     background: white;
+
     padding: 25px 20px;
+
     text-align: center;
+
     border-bottom: 1px solid #e5e7eb;
 }
 
 header h1 {
     color: #8b1458;
+
     font-size: 2rem;
+
     letter-spacing: 1px;
 }
 
 header h2 {
     color: #111827;
+
     font-size: 1.1rem;
+
     margin-top: 5px;
+
     letter-spacing: 2px;
 }
 
@@ -46,38 +59,82 @@ header h2 {
 
 nav {
     background: #8b1458;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 16px 8%;
+
+    padding: 0 8%;
+
+    position: relative;
 }
+
+
+/* Top row */
+
+.nav-top {
+    min-height: 62px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+
+/* Logo */
 
 .nav-logo {
     color: white;
+
     font-size: 1.1rem;
+
     font-weight: bold;
 }
 
+
+/* =========================
+   NAVIGATION LINKS
+========================= */
+
 .nav-links {
     display: flex;
+
+    align-items: center;
+
+    justify-content: flex-end;
+
     gap: 30px;
 }
 
 .nav-links a {
     color: white;
+
     text-decoration: none;
+
     font-weight: bold;
+
     position: relative;
+
+    padding: 22px 0;
 }
 
+
+/* Underline animation */
+
 .nav-links a::after {
+
     content: "";
+
     position: absolute;
+
     width: 0;
+
     height: 2px;
+
     background: white;
+
     left: 0;
-    bottom: -6px;
+
+    bottom: 14px;
+
     transition: width 0.3s ease;
 }
 
@@ -85,8 +142,35 @@ nav {
     width: 100%;
 }
 
+
+/* Active page */
+
 .nav-links a.active {
     color: #ffd1e5;
+}
+
+
+/* =========================
+   HAMBURGER BUTTON
+========================= */
+
+.menu-toggle {
+
+    display: none;
+
+    background: transparent;
+
+    border: none;
+
+    color: white;
+
+    font-size: 28px;
+
+    cursor: pointer;
+
+    padding: 5px;
+
+    line-height: 1;
 }
 
 
@@ -95,10 +179,13 @@ nav {
 ========================= */
 
 .hero {
+
     min-height: 500px;
 
     display: flex;
+
     align-items: center;
+
     justify-content: center;
 
     text-align: center;
@@ -113,37 +200,53 @@ nav {
 }
 
 .hero-content {
+
     max-width: 900px;
+
     margin: auto;
 }
 
 .hero-label {
+
     color: #e91e63;
+
     font-size: 0.9rem;
+
     font-weight: bold;
+
     letter-spacing: 2px;
+
     margin-bottom: 20px;
 }
 
 .hero h1 {
+
     color: #1f2937;
+
     font-size: clamp(2.5rem, 5vw, 4rem);
+
     line-height: 1.15;
+
     max-width: 850px;
+
     margin: auto;
 }
 
 .hero h1 span {
+
     color: #8b1458;
 }
 
 .hero-description {
+
     max-width: 600px;
+
     margin: 25px auto;
 
     color: #6b7280;
 
     font-size: 1.1rem;
+
     line-height: 1.7;
 }
 
@@ -153,41 +256,58 @@ nav {
 ========================= */
 
 .hero-buttons {
+
     display: flex;
+
     justify-content: center;
+
     gap: 15px;
+
     margin-top: 30px;
 }
 
 .primary-btn,
 .secondary-btn {
+
     padding: 13px 25px;
+
     border-radius: 30px;
 
     text-decoration: none;
+
     font-weight: bold;
 
     transition: all 0.3s ease;
 }
 
 .primary-btn {
+
     background: #e91e63;
+
     color: white;
 }
 
 .primary-btn:hover {
+
     background: #8b1458;
+
     transform: translateY(-3px);
-    box-shadow: 0 8px 18px rgba(139, 20, 88, 0.25);
+
+    box-shadow:
+        0 8px 18px rgba(139, 20, 88, 0.25);
 }
 
 .secondary-btn {
+
     border: 2px solid #8b1458;
+
     color: #8b1458;
 }
 
 .secondary-btn:hover {
+
     background: #8b1458;
+
     color: white;
 }
 
@@ -197,26 +317,34 @@ nav {
 ========================= */
 
 .cards {
+
     max-width: 1200px;
 
-   margin: 70px auto;
+    margin: 70px auto;
+
     padding: 0 25px;
 
     display: grid;
+
     grid-template-columns: repeat(4, 1fr);
+
     gap: 25px;
 }
 
 .card {
+
     background: white;
 
     padding: 30px 20px;
 
     border-radius: 16px;
+
     border: 1px solid #e5e7eb;
 
     text-align: center;
+
     text-decoration: none;
+
     color: inherit;
 
     min-height: 300px;
@@ -225,6 +353,7 @@ nav {
 }
 
 .card:hover {
+
     transform: translateY(-8px);
 
     box-shadow:
@@ -232,28 +361,36 @@ nav {
 }
 
 .card h3 {
+
     color: #8b1458;
+
     font-size: 1.3rem;
+
     margin-bottom: 10px;
 }
 
 .card p {
+
     color: #6b7280;
+
     line-height: 1.5;
 }
 
 .card span {
+
     display: inline-block;
 
     margin-top: 20px;
 
     color: #e91e63;
+
     font-weight: bold;
 
     transition: transform 0.3s ease;
 }
 
 .card:hover span {
+
     transform: translateX(5px);
 }
 
@@ -263,13 +400,17 @@ nav {
 ========================= */
 
 .card-icon {
+
     width: 65px;
+
     height: 65px;
 
     margin: 0 auto 20px;
 
     display: flex;
+
     align-items: center;
+
     justify-content: center;
 
     background: #fff1f7;
@@ -282,7 +423,9 @@ nav {
 }
 
 .card:hover .card-icon {
+
     transform: scale(1.1) rotate(5deg);
+
     background: #fce4ec;
 }
 
@@ -292,53 +435,68 @@ nav {
 ========================= */
 
 .announcements {
+
     max-width: 1200px;
 
     margin: 70px auto;
+
     padding: 30px;
 
     background: white;
 
     border-radius: 16px;
+
     border: 1px solid #e5e7eb;
 
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.04);
 }
 
 
-/* Announcement Header */
+/* Header */
 
 .section-header {
+
     display: flex;
+
     justify-content: space-between;
+
     align-items: center;
 
     margin-bottom: 25px;
 }
 
 .section-header h2 {
+
     color: #8b1458;
 }
 
 .section-header span {
+
     font-size: 1.8rem;
 }
 
 
-/* Announcement List */
+/* Announcement list */
 
 .announcement-list {
+
     display: flex;
+
     flex-direction: column;
+
     gap: 15px;
 }
 
 
-/* Individual Announcement */
+/* Individual announcement */
 
 .announcement {
+
     display: flex;
+
     align-items: center;
+
     gap: 18px;
 
     padding: 18px;
@@ -353,34 +511,40 @@ nav {
 }
 
 .announcement:hover {
+
     transform: translateX(6px);
 
     background: #fff1f7;
 }
 
 
-/* Announcement Icon */
+/* Icon */
 
 .announcement-icon {
+
     font-size: 1.8rem;
 }
 
 
-/* Announcement Text */
+/* Text */
 
 .announcement h3 {
+
     color: #8b1458;
+
     margin-bottom: 5px;
 }
 
 .announcement p {
+
     color: #6b7280;
 }
 
 
-/* Announcement Tag */
+/* Tag */
 
 .announcement-tag {
+
     margin-left: auto;
 
     padding: 6px 12px;
@@ -392,6 +556,7 @@ nav {
     border-radius: 20px;
 
     font-size: 0.8rem;
+
     font-weight: bold;
 }
 
@@ -401,6 +566,7 @@ nav {
 ========================= */
 
 footer {
+
     background: #111827;
 
     color: white;
@@ -414,12 +580,13 @@ footer {
 
 
 /* =========================
-   TABLET RESPONSIVE DESIGN
+   TABLET
 ========================= */
 
 @media (max-width: 900px) {
 
     .cards {
+
         grid-template-columns: repeat(2, 1fr);
     }
 
@@ -427,52 +594,254 @@ footer {
 
 
 /* =========================
-   MOBILE RESPONSIVE DESIGN
+   MOBILE
 ========================= */
 
 @media (max-width: 600px) {
 
-    nav {
-        flex-direction: column;
-        gap: 15px;
-    }
-.announcement {
-    align-items: flex-start;
-}
 
-.announcement-tag {
-    display: none;
-}
-    .nav-links {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 15px;
+    /* -------------------------
+       UNIVERSITY HEADER
+    ------------------------- */
+
+    header {
+
+        padding: 22px 15px;
     }
+
+    header h1 {
+
+        font-size: 1.55rem;
+
+        letter-spacing: 1px;
+    }
+
+    header h2 {
+
+        font-size: 0.95rem;
+
+        letter-spacing: 2px;
+    }
+
+
+    /* -------------------------
+       NAVIGATION
+    ------------------------- */
+
+    nav {
+
+        padding: 0 18px;
+    }
+
+    .nav-top {
+
+        min-height: 58px;
+    }
+
+    .nav-logo {
+
+        font-size: 1rem;
+    }
+
+
+    /* Show hamburger */
+
+    .menu-toggle {
+
+        display: block;
+    }
+
+
+    /* Hide links initially */
+
+    .nav-links {
+
+        display: none;
+
+        width: 100%;
+
+        flex-direction: column;
+
+        gap: 0;
+
+        padding-bottom: 8px;
+    }
+
+
+    /* Show menu when clicked */
+
+    .nav-links.show {
+
+        display: flex;
+    }
+
+
+    /* Individual links */
+
+    .nav-links a {
+
+        width: 100%;
+
+        text-align: center;
+
+        padding: 13px 10px;
+
+        border-top: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+
+    .nav-links a::after {
+
+        display: none;
+    }
+
+
+    /* -------------------------
+       HERO
+    ------------------------- */
 
     .hero {
+
+        min-height: auto;
+
         padding: 60px 20px;
     }
 
-    .hero h1 {
-        font-size: 2.5rem;
+    .hero-label {
+
+        font-size: 0.78rem;
+
+        letter-spacing: 1.5px;
+
+        margin-bottom: 15px;
     }
 
+    .hero h1 {
+
+        font-size: 2.4rem;
+
+        line-height: 1.2;
+    }
+
+    .hero-description {
+
+        font-size: 1rem;
+
+        line-height: 1.7;
+
+        margin: 22px auto;
+    }
+
+
+    /* -------------------------
+       HERO BUTTONS
+    ------------------------- */
+
     .hero-buttons {
+
         flex-direction: column;
+
         align-items: center;
+
+        gap: 12px;
     }
 
     .primary-btn,
     .secondary-btn {
+
         width: 220px;
+
+        text-align: center;
     }
+
+
+    /* -------------------------
+       CARDS
+    ------------------------- */
 
     .cards {
+
         grid-template-columns: 1fr;
+
+        margin: 45px auto;
+
+        padding: 0 18px;
+
+        gap: 18px;
     }
 
-    header h1 {
-        font-size: 1.6rem;
+    .card {
+
+        min-height: auto;
+
+        padding: 28px 20px;
+    }
+
+
+    /* -------------------------
+       ANNOUNCEMENTS
+    ------------------------- */
+
+    .announcements {
+
+        margin: 45px 18px;
+
+        padding: 22px 18px;
+
+        border-radius: 14px;
+    }
+
+    .section-header {
+
+        margin-bottom: 18px;
+    }
+
+    .section-header h2 {
+
+        font-size: 1.3rem;
+    }
+
+    .announcement {
+
+        align-items: flex-start;
+
+        gap: 12px;
+
+        padding: 15px;
+    }
+
+    .announcement-icon {
+
+        font-size: 1.5rem;
+    }
+
+    .announcement h3 {
+
+        font-size: 1rem;
+    }
+
+    .announcement p {
+
+        font-size: 0.9rem;
+
+        line-height: 1.5;
+    }
+
+    .announcement-tag {
+
+        display: none;
+    }
+
+
+    /* -------------------------
+       FOOTER
+    ------------------------- */
+
+    footer {
+
+        padding: 22px 15px;
+
+        font-size: 0.9rem;
     }
 
 }

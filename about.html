@@ -15,7 +15,6 @@
 
 <body>
 
-
 <header>
 
     <h1>ANNA UNIVERSITY</h1>
@@ -31,8 +30,11 @@
         🎓 Student Portal
     </div>
 
+    <button class="menu-toggle" id="menuToggle">
+        ☰
+    </button>
 
-    <div class="nav-links">
+    <div class="nav-links" id="navLinks">
 
         <a href="index.html">
             Home
@@ -61,6 +63,8 @@
 
 <section class="about-hero">
 
+    <p class="hero-label">ABOUT THE DIGITAL CAMPUS</p>
+
     <h1>About Our Student Portal</h1>
 
     <p>
@@ -74,7 +78,9 @@
 <main class="about-container">
 
 
-    <div class="about-card">
+    <!-- About Portal -->
+
+    <section class="about-card">
 
         <h2>🎓 About the Portal</h2>
 
@@ -85,93 +91,102 @@
             centralized digital system.
         </p>
 
-    </div>
+    </section>
 
 
-   <div class="about-card">
+    <!-- Student Features -->
 
-    <h2>📚 What Students Can Access</h2>
+    <section class="about-card">
 
-    <div class="feature-grid">
+        <h2>📚 What Students Can Access</h2>
 
-        <div class="feature-item">
+        <div class="feature-grid">
 
-            <div class="feature-icon">📖</div>
+            <div class="feature-item">
 
-            <h3>Academic Information</h3>
+                <div class="feature-icon">📖</div>
+
+                <h3>Academic Information</h3>
+
+                <p>
+                    Access academic details and important
+                    educational resources.
+                </p>
+
+            </div>
+
+
+            <div class="feature-item">
+
+                <div class="feature-icon">📝</div>
+
+                <h3>Examination Details</h3>
+
+                <p>
+                    Stay updated with examination schedules
+                    and academic notices.
+                </p>
+
+            </div>
+
+
+            <div class="feature-item">
+
+                <div class="feature-icon">📊</div>
+
+                <h3>Semester Results</h3>
+
+                <p>
+                    View your academic performance and
+                    semester results easily.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Mission and Vision -->
+
+    <section class="mission-section">
+
+        <div class="mission-card">
+
+            <div class="mission-icon">🎯</div>
+
+            <h2>Our Mission</h2>
 
             <p>
-                Access academic details and important
-                educational resources.
+                To provide students with a simple and organized
+                digital platform that makes academic information
+                easier to access and manage.
             </p>
 
         </div>
 
 
-        <div class="feature-item">
+        <div class="mission-card">
 
-            <div class="feature-icon">📝</div>
+            <div class="mission-icon">🚀</div>
 
-            <h3>Examination Details</h3>
+            <h2>Our Vision</h2>
 
             <p>
-                Stay updated with examination schedules
-                and academic notices.
+                To create a modern and student-friendly digital
+                campus that connects students with essential
+                academic services.
             </p>
 
         </div>
 
-
-        <div class="feature-item">
-
-            <div class="feature-icon">📊</div>
-
-            <h3>Semester Results</h3>
-
-            <p>
-                View your academic performance and
-                semester results easily.
-            </p>
-
-        </div>
-
-    </div>
-    <div class="mission-section">
-
-    <div class="mission-card">
-
-        <div class="mission-icon">🎯</div>
-
-        <h2>Our Mission</h2>
-
-        <p>
-            To provide students with a simple and organized
-            digital platform that makes academic information
-            easier to access and manage.
-        </p>
-
-    </div>
+    </section>
 
 
-    <div class="mission-card">
+    <!-- Goal -->
 
-        <div class="mission-icon">🚀</div>
-
-        <h2>Our Vision</h2>
-
-        <p>
-            To create a modern and student-friendly digital
-            campus that connects students with essential
-            academic services.
-        </p>
-
-    </div>
-
-</div>
-
-</div>
-
-    <div class="about-card">
+    <section class="about-card goal-card">
 
         <h2>🔐 Our Goal</h2>
 
@@ -181,7 +196,7 @@
             information easier for students to access.
         </p>
 
-    </div>
+    </section>
 
 
 </main>
@@ -193,6 +208,8 @@
 
 </footer>
 
+
+<script src="js/menu.js"></script>
 
 </body>
 

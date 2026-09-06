@@ -1,54 +1,369 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial,sans-serif;
+/* =========================
+   GLOBAL RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-body{
-    background:#eef5ff;
+body {
+    font-family: Arial, sans-serif;
+    background: #f8f7fc;
+    color: #1f2937;
+    min-height: 100vh;
 }
 
-header{
-    background:#004aad;
-    color:white;
-    padding:20px;
-    text-align:center;
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+    background: #8b1458;
+    color: white;
+    padding: 22px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.container{
-    max-width:900px;
-    margin:30px auto;
-    background:white;
-    padding:25px;
-    border-radius:15px;
-    box-shadow:0 0 10px rgba(0,0,0,.15);
+header h1 {
+    font-size: 1.6rem;
 }
 
-.container h2{
-    color:#004aad;
-    margin-bottom:20px;
+
+/* =========================
+   MAIN CONTAINER
+========================= */
+
+.container {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 25px;
 }
 
-input{
-    width:100%;
-    padding:12px;
-    margin:10px 0;
-    border:1px solid #ccc;
-    border-radius:8px;
+
+/* =========================
+   SECTION HEADINGS
+========================= */
+
+h2 {
+    color: #8b1458;
+    font-size: 1.45rem;
+    margin-bottom: 18px;
 }
 
-button{
-    width:100%;
-    padding:14px;
-    background:#004aad;
-    color:white;
-    border:none;
-    border-radius:8px;
-    cursor:pointer;
-    font-size:16px;
+
+/* =========================
+   FORM SECTIONS
+========================= */
+
+.container > section,
+.container > div {
+    background: white;
+    padding: 28px;
+    margin-bottom: 25px;
+    border-radius: 18px;
+    border: 1px solid #eadde5;
+    box-shadow: 0 6px 20px rgba(139, 20, 88, 0.07);
 }
 
-button:hover{
-    background:#003080;
+
+/* =========================
+   INPUTS
+========================= */
+
+input,
+textarea,
+select {
+    width: 100%;
+    padding: 13px 15px;
+    margin-bottom: 14px;
+
+    border: 1px solid #d1d5db;
+    border-radius: 10px;
+
+    font-size: 1rem;
+    font-family: inherit;
+
+    outline: none;
+    background: white;
+
+    transition: 0.2s ease;
+}
+
+textarea {
+    min-height: 110px;
+    resize: vertical;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: #8b1458;
+    box-shadow: 0 0 0 3px #fff1f7;
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+button {
+    background: #e91e63;
+    color: white;
+
+    border: none;
+    padding: 12px 22px;
+
+    border-radius: 10px;
+
+    font-size: 0.95rem;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.25s ease;
+}
+
+button:hover {
+    background: #8b1458;
+    transform: translateY(-1px);
+}
+
+
+/* =========================
+   SEARCH RESULT
+========================= */
+
+#studentResult {
+    margin-top: 18px;
+}
+
+.student-result {
+    background: #fff7fb;
+    border: 1px solid #f1c9dc;
+    border-radius: 14px;
+    padding: 20px;
+}
+
+.student-result h3 {
+    color: #8b1458;
+    margin-bottom: 15px;
+}
+
+.student-result p {
+    margin: 9px 0;
+    line-height: 1.5;
+}
+
+
+/* =========================
+   ADMIN ANNOUNCEMENTS
+========================= */
+
+.admin-announcement {
+    background: #fff7fb;
+    border: 1px solid #f1c9dc;
+
+    padding: 18px;
+    margin-top: 14px;
+
+    border-radius: 12px;
+}
+
+.admin-announcement h3 {
+    color: #8b1458;
+    margin-bottom: 8px;
+}
+
+.admin-announcement p {
+    margin-bottom: 14px;
+    line-height: 1.5;
+}
+
+.admin-announcement button {
+    background: #dc2626;
+    padding: 9px 16px;
+    font-size: 0.9rem;
+}
+
+.admin-announcement button:hover {
+    background: #991b1b;
+}
+
+
+/* =========================
+   DELETE STUDENT
+========================= */
+
+#deleteRegno {
+    margin-bottom: 12px;
+}
+
+
+/* =========================
+   HORIZONTAL SEPARATOR
+========================= */
+
+hr {
+    border: none;
+    border-top: 1px solid #eadde5;
+    margin: 25px 0;
+}
+
+
+/* =========================
+   LABELS
+========================= */
+
+label {
+    display: block;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 7px;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+
+    header {
+        padding: 18px 20px;
+        justify-content: center;
+        text-align: center;
+    }
+
+    header h1 {
+        font-size: 1.25rem;
+    }
+
+    .container {
+        width: 100%;
+        margin: 25px auto;
+        padding: 0 15px;
+    }
+
+    .container > section,
+    .container > div {
+        padding: 20px;
+        margin-bottom: 18px;
+        border-radius: 14px;
+    }
+
+    h2 {
+        font-size: 1.25rem;
+        margin-bottom: 15px;
+    }
+
+    input,
+    textarea,
+    select {
+        font-size: 0.95rem;
+        padding: 12px;
+    }
+
+    button {
+        width: 100%;
+        margin-top: 5px;
+    }
+
+    .student-result {
+        padding: 16px;
+    }
+
+    .admin-announcement {
+        padding: 15px;
+    }
+}
+@media (max-width: 600px) {
+
+    header {
+        padding: 18px;
+        text-align: center;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+        margin-bottom: 5px;
+    }
+
+    header p {
+        font-size: 0.95rem;
+        margin: 0;
+    }
+
+    header button {
+        width: 100%;
+        max-width: 220px;
+    }
+
+    .container {
+        width: 100%;
+        padding: 15px;
+        box-sizing: border-box;
+    }
+
+    .admin-card {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 20px;
+    }
+
+    .admin-card input,
+    .admin-card textarea,
+    .admin-card button {
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
+@media (max-width: 600px) {
+
+    header {
+        padding: 18px;
+        text-align: center;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+        margin-bottom: 5px;
+    }
+
+    header p {
+        font-size: 0.95rem;
+        margin: 0;
+    }
+
+    header button {
+        width: 100%;
+        max-width: 220px;
+    }
+
+    .container {
+        width: 100%;
+        padding: 15px;
+        box-sizing: border-box;
+    }
+
+    .admin-card {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 20px;
+    }
+
+    .admin-card input,
+    .admin-card textarea,
+    .admin-card button {
+        width: 100%;
+        box-sizing: border-box;
+    }
 }

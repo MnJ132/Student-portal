@@ -12,6 +12,7 @@ body {
     font-family: Arial, sans-serif;
     background: #f8f7fc;
     color: #1f2937;
+    line-height: 1.6;
 }
 
 
@@ -98,13 +99,33 @@ nav {
 
 
 /* =========================
+   HAMBURGER BUTTON
+========================= */
+
+.menu-toggle {
+    display: none;
+
+    background: transparent;
+    border: none;
+
+    color: white;
+
+    font-size: 28px;
+
+    cursor: pointer;
+
+    padding: 4px 8px;
+}
+
+
+/* =========================
    ABOUT HERO
 ========================= */
 
 .about-hero {
     text-align: center;
 
-    padding: 80px 20px;
+    padding: 75px 20px;
 
     background: linear-gradient(
         135deg,
@@ -113,41 +134,56 @@ nav {
     );
 }
 
+.hero-label {
+    color: #e91e63;
+
+    font-size: 0.85rem;
+
+    font-weight: bold;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 12px;
+}
+
 .about-hero h1 {
     color: #8b1458;
 
-    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-size: clamp(2.2rem, 5vw, 3.8rem);
 
-    margin-bottom: 15px;
+    line-height: 1.15;
+
+    margin-bottom: 18px;
 }
 
-.about-hero p {
+.about-hero > p:last-child {
     max-width: 650px;
 
     margin: auto;
 
     color: #6b7280;
 
-    font-size: 1.1rem;
+    font-size: 1.05rem;
+
     line-height: 1.7;
 }
 
 
 /* =========================
-   CONTENT CONTAINER
+   MAIN CONTAINER
 ========================= */
 
 .about-container {
     max-width: 1100px;
 
-    margin: 60px auto;
+    margin: 55px auto;
 
     padding: 0 25px;
 }
 
 
 /* =========================
-   ABOUT CARDS
+   GENERAL CARDS
 ========================= */
 
 .about-card {
@@ -157,23 +193,17 @@ nav {
 
     margin-bottom: 25px;
 
-    border-radius: 16px;
+    border-radius: 18px;
 
     border: 1px solid #e5e7eb;
 
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
-
-    transition: all 0.3s ease;
-}
-
-.about-card:hover {
-    transform: translateY(-5px);
-
-    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
 }
 
 .about-card h2 {
     color: #8b1458;
+
+    font-size: 1.5rem;
 
     margin-bottom: 15px;
 }
@@ -185,116 +215,6 @@ nav {
 }
 
 
-/* =========================
-   FOOTER
-========================= */
-
-footer {
-    background: #111827;
-
-    color: white;
-
-    text-align: center;
-
-    padding: 25px;
-
-    margin-top: 60px;
-}
-
-/* =========================
-   MOBILE RESPONSIVE DESIGN
-========================= */
-
-@media (max-width: 600px) {
-
-    /* Navigation */
-
-    nav {
-        flex-direction: column;
-        gap: 18px;
-        padding: 18px 20px;
-    }
-
-    .nav-links {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 14px 20px;
-    }
-
-
-    /* About Hero */
-
-    .about-hero {
-        padding: 55px 20px;
-    }
-
-    .about-hero h1 {
-        font-size: 2.5rem;
-        line-height: 1.2;
-    }
-
-    .about-hero p {
-        font-size: 1rem;
-    }
-
-
-    /* Main Container */
-
-    .about-container {
-        margin: 35px auto;
-        padding: 0 16px;
-    }
-
-
-    /* About Cards */
-
-    .about-card {
-        padding: 25px 20px;
-        margin-bottom: 20px;
-    }
-
-
-    /* Feature Cards */
-
-    .feature-grid {
-        grid-template-columns: 1fr;
-        gap: 16px;
-    }
-
-    .feature-item {
-        padding: 25px 20px;
-    }
-
-
-    /* Mission and Vision */
-
-    .mission-section {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-
-    .mission-card {
-        padding: 35px 25px;
-    }
-
-    .mission-card h2 {
-        font-size: 1.8rem;
-    }
-
-    .mission-card p {
-        font-size: 1rem;
-        line-height: 1.7;
-    }
-
-
-    /* Footer */
-
-    footer {
-        padding: 22px 15px;
-        font-size: 0.9rem;
-    }
-
-}
 /* =========================
    FEATURE GRID
 ========================= */
@@ -310,31 +230,36 @@ footer {
 }
 
 .feature-item {
-    padding: 25px 20px;
-
     background: #fff1f7;
 
-    border-radius: 12px;
+    padding: 28px 22px;
+
+    border-radius: 14px;
 
     text-align: center;
 
-    transition: all 0.3s ease;
+    border: 1px solid #f5d9e6;
+
+    transition: transform 0.25s ease,
+                box-shadow 0.25s ease;
 }
 
 .feature-item:hover {
-    transform: translateY(-5px);
+    transform: translateY(-4px);
 
-    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 8px 20px rgba(139, 20, 88, 0.1);
 }
 
 .feature-icon {
-    font-size: 2rem;
+    font-size: 2.2rem;
 
-    margin-bottom: 12px;
+    margin-bottom: 14px;
 }
 
 .feature-item h3 {
     color: #8b1458;
+
+    font-size: 1.1rem;
 
     margin-bottom: 10px;
 }
@@ -342,8 +267,12 @@ footer {
 .feature-item p {
     color: #6b7280;
 
+    font-size: 0.95rem;
+
     line-height: 1.6;
 }
+
+
 /* =========================
    MISSION AND VISION
 ========================= */
@@ -367,34 +296,233 @@ footer {
 
     color: white;
 
-    padding: 35px;
+    padding: 38px 30px;
 
-    border-radius: 16px;
+    border-radius: 18px;
 
     text-align: center;
 
-    transition: all 0.3s ease;
-}
-
-.mission-card:hover {
-    transform: translateY(-6px);
-
-    box-shadow: 0 12px 25px rgba(139, 20, 88, 0.25);
+    box-shadow: 0 8px 20px rgba(139, 20, 88, 0.12);
 }
 
 .mission-icon {
     font-size: 2.5rem;
 
-    margin-bottom: 15px;
+    margin-bottom: 12px;
 }
 
 .mission-card h2 {
     color: white;
-    margin-bottom: 15px;
+
+    margin-bottom: 12px;
 }
 
 .mission-card p {
-    line-height: 1.7;
-
     color: #ffeaf3;
+
+    line-height: 1.7;
+}
+
+
+/* =========================
+   GOAL
+========================= */
+
+.goal-card {
+    margin-bottom: 0;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background: #111827;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 25px;
+
+    margin-top: 60px;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    /* Header */
+
+    header {
+        padding: 20px 15px;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    header h2 {
+        font-size: 0.95rem;
+    }
+
+
+    /* Navigation */
+
+    nav {
+        padding: 14px 18px;
+
+        display: flex;
+
+        flex-direction: row;
+
+        align-items: center;
+
+        justify-content: space-between;
+
+        flex-wrap: wrap;
+    }
+
+    .nav-logo {
+        font-size: 1rem;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+
+        width: 100%;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 0;
+
+        margin-top: 12px;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .nav-links a {
+        width: 100%;
+
+        text-align: center;
+
+        padding: 12px;
+
+        border-top: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+
+    /* Hero */
+
+    .about-hero {
+        padding: 55px 20px;
+    }
+
+    .hero-label {
+        font-size: 0.75rem;
+
+        letter-spacing: 2px;
+    }
+
+    .about-hero h1 {
+        font-size: 2.1rem;
+
+        line-height: 1.2;
+    }
+
+    .about-hero > p:last-child {
+        font-size: 0.95rem;
+    }
+
+
+    /* Container */
+
+    .about-container {
+        margin: 35px auto;
+
+        padding: 0 16px;
+    }
+
+
+    /* General cards */
+
+    .about-card {
+        padding: 25px 20px;
+
+        margin-bottom: 18px;
+
+        border-radius: 15px;
+    }
+
+    .about-card h2 {
+        font-size: 1.3rem;
+    }
+
+
+    /* Features */
+
+    .feature-grid {
+        grid-template-columns: 1fr;
+
+        gap: 14px;
+
+        margin-top: 20px;
+    }
+
+    .feature-item {
+        padding: 24px 18px;
+    }
+
+    .feature-item h3 {
+        font-size: 1.05rem;
+    }
+
+
+    /* Mission + Vision */
+
+    .mission-section {
+        grid-template-columns: 1fr;
+
+        gap: 18px;
+
+        margin-bottom: 18px;
+    }
+
+    .mission-card {
+        padding: 30px 22px;
+
+        border-radius: 15px;
+    }
+
+    .mission-card h2 {
+        font-size: 1.4rem;
+    }
+
+    .mission-card p {
+        font-size: 0.95rem;
+    }
+
+
+    /* Footer */
+
+    footer {
+        padding: 22px 15px;
+
+        font-size: 0.85rem;
+
+        margin-top: 40px;
+    }
+
 }

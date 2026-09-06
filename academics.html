@@ -16,6 +16,10 @@
 <body>
 
 
+<!-- =========================
+     UNIVERSITY HEADER
+========================= -->
+
 <header>
 
     <h1>ANNA UNIVERSITY</h1>
@@ -25,14 +29,30 @@
 </header>
 
 
+<!-- =========================
+     NAVIGATION
+========================= -->
+
 <nav>
 
-    <div class="nav-logo">
-        🎓 Student Portal
+    <div class="nav-top">
+
+        <div class="nav-logo">
+            🎓 Student Portal
+        </div>
+
+        <button
+            class="menu-toggle"
+            id="menuToggle"
+            aria-label="Open navigation menu"
+        >
+            ☰
+        </button>
+
     </div>
 
 
-    <div class="nav-links">
+    <div class="nav-links" id="navLinks">
 
         <a href="index.html">
             Home
@@ -59,9 +79,15 @@
 </nav>
 
 
+<!-- =========================
+     ACADEMICS HERO
+========================= -->
+
 <section class="academics-hero">
 
-    <h1>Academic Excellence</h1>
+    <h1>
+        Academic Excellence
+    </h1>
 
     <p>
         Explore achievements, placements, learning resources
@@ -71,8 +97,14 @@
 </section>
 
 
+<!-- =========================
+     ACADEMIC CARDS
+========================= -->
+
 <main class="academics-container">
 
+
+    <!-- Student Achievements -->
 
     <div class="academic-card">
 
@@ -80,20 +112,30 @@
             🏆
         </div>
 
-        <h2>Student Achievements</h2>
+        <h2>
+            Student Achievements
+        </h2>
 
         <ul>
 
-            <li>National Level Coding Competition Winners</li>
+            <li>
+                National Level Coding Competition Winners
+            </li>
 
-            <li>University Rank Holders</li>
+            <li>
+                University Rank Holders
+            </li>
 
-            <li>Sports Championship Winners</li>
+            <li>
+                Sports Championship Winners
+            </li>
 
         </ul>
 
     </div>
 
+
+    <!-- Placement -->
 
     <div class="academic-card">
 
@@ -101,7 +143,9 @@
             💼
         </div>
 
-        <h2>Placement Highlights</h2>
+        <h2>
+            Placement Highlights
+        </h2>
 
         <p>
             <strong>Highest Package:</strong> ₹18 LPA
@@ -118,13 +162,17 @@
     </div>
 
 
+    <!-- Digital Library -->
+
     <div class="academic-card">
 
         <div class="academic-icon">
             📚
         </div>
 
-        <h2>Digital Library</h2>
+        <h2>
+            Digital Library
+        </h2>
 
         <p>
             Access e-books, journals, research papers
@@ -134,13 +182,17 @@
     </div>
 
 
+    <!-- Research -->
+
     <div class="academic-card">
 
         <div class="academic-icon">
             🔬
         </div>
 
-        <h2>Research & Innovation</h2>
+        <h2>
+            Research & Innovation
+        </h2>
 
         <p>
             Students participate in AI, Robotics, IoT
@@ -150,13 +202,17 @@
     </div>
 
 
+    <!-- Academic Notice -->
+
     <div class="academic-card notice-card">
 
         <div class="academic-icon">
             📢
         </div>
 
-        <h2>Academic Notices</h2>
+        <h2>
+            Academic Notices
+        </h2>
 
         <p>
             Semester Exam Registration Starts from
@@ -169,12 +225,22 @@
 </main>
 
 
+<!-- =========================
+     FOOTER
+========================= -->
+
 <footer>
 
     © 2026 Anna University Student Portal
 
 </footer>
 
+
+<!-- =========================
+     JAVASCRIPT
+========================= -->
+
+<script src="js/menu.js"></script>
 
 </body>
 

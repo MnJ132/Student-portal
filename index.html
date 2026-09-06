@@ -1,45 +1,94 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Flower Student Portal</title>
- <link rel="stylesheet" href="css/index.css">
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Flower Student Portal</title>
+
+    <link rel="stylesheet" href="css/index.css">
+
 </head>
 
 <body>
 
+<!-- =========================
+     UNIVERSITY HEADER
+========================= -->
+
 <header>
+
     <h1>ANNA UNIVERSITY</h1>
+
     <h2>STUDENT PORTAL</h2>
+
 </header>
+
+
+<!-- =========================
+     NAVIGATION
+========================= -->
 
 <nav>
 
-    <div class="nav-logo">
-        🎓 Student Portal
+    <div class="nav-top">
+
+        <div class="nav-logo">
+            🎓 Student Portal
+        </div>
+
+        <button
+            class="menu-toggle"
+            id="menuToggle"
+            aria-label="Open navigation menu"
+        >
+            ☰
+        </button>
+
     </div>
 
-    <div class="nav-links">
 
-        <a href="index.html" class="active">Home</a>
+    <div class="nav-links" id="navLinks">
 
-        <a href="about.html">About Us</a>
+        <a href="index.html" class="active">
+            Home
+        </a>
 
-        <a href="academics.html">Academics</a>
+        <a href="about.html">
+            About Us
+        </a>
 
-        <a href="results.html">Results</a>
+        <a href="academics.html">
+            Academics
+        </a>
 
-        <a href="contact.html">Contact</a>
+        <a href="results.html">
+            Results
+        </a>
+
+        <a href="contact.html">
+            Contact
+        </a>
 
     </div>
 
 </nav>
+
+
+<!-- =========================
+     HERO SECTION
+========================= -->
+
 <section class="hero">
 
     <div class="hero-content">
 
-        <p class="hero-label">WELCOME TO THE DIGITAL CAMPUS</p>
+        <p class="hero-label">
+            WELCOME TO THE DIGITAL CAMPUS
+        </p>
 
         <h1>
             Your Academic Journey,
@@ -47,10 +96,13 @@
         </h1>
 
         <p class="hero-description">
+
             Access academic information, examination details,
             student results and important announcements through
             the Anna University Student Portal.
+
         </p>
+
 
         <div class="hero-buttons">
 
@@ -67,115 +119,160 @@
     </div>
 
 </section>
+
+
+<!-- =========================
+     FEATURE CARDS
+========================= -->
+
 <div class="cards">
+
 
     <a href="results.html" class="card">
 
-        <div class="card-icon">🎓</div>
+        <div class="card-icon">
+            🎓
+        </div>
 
-        <h3>Student Login</h3>
+        <h3>
+            Student Login
+        </h3>
 
         <p>
             Access your academic account
             and view your student information.
         </p>
 
-        <span>Login →</span>
+        <span>
+            Login →
+        </span>
 
     </a>
 
 
     <a href="academics.html" class="card">
 
-        <div class="card-icon">📚</div>
+        <div class="card-icon">
+            📚
+        </div>
 
-        <h3>Academics</h3>
+        <h3>
+            Academics
+        </h3>
 
         <p>
             Explore academic details,
             achievements and resources.
         </p>
 
-        <span>Explore →</span>
+        <span>
+            Explore →
+        </span>
 
     </a>
 
 
     <a href="#" class="card">
 
-        <div class="card-icon">📝</div>
+        <div class="card-icon">
+            📝
+        </div>
 
-        <h3>Examinations</h3>
+        <h3>
+            Examinations
+        </h3>
 
         <p>
             View examination schedules
             and important exam information.
         </p>
 
-        <span>View Schedule →</span>
+        <span>
+            View Schedule →
+        </span>
 
     </a>
 
 
     <a href="results.html" class="card">
 
-        <div class="card-icon">📊</div>
+        <div class="card-icon">
+            📊
+        </div>
 
-        <h3>Results</h3>
+        <h3>
+            Results
+        </h3>
 
         <p>
             Check your semester marks,
             grades and academic performance.
         </p>
 
-        <span>View Results →</span>
+        <span>
+            View Results →
+        </span>
 
     </a>
 
 </div>
 
 
+<!-- =========================
+     ANNOUNCEMENTS
+========================= -->
 
 <section class="announcements">
 
     <div class="section-header">
-        <h2>Latest Announcements</h2>
-        <span>📢</span>
+
+        <h2>
+            Latest Announcements
+        </h2>
+
+        <span>
+            📢
+        </span>
+
     </div>
 
-    <div class="announcement-list">
 
-        <div class="announcement">
-            <span class="announcement-icon">📅</span>
+    <div
+        class="announcement-list"
+        id="announcementsList"
+    >
 
-            <div>
-                <h3>Semester Examination</h3>
-                <p>Semester examinations will begin next month.</p>
-            </div>
-
-            <span class="announcement-tag">Important</span>
-        </div>
-
-
-        <div class="announcement">
-            <span class="announcement-icon">📚</span>
-
-            <div>
-                <h3>Project Submission</h3>
-                <p>Project submission deadline has been announced.</p>
-            </div>
-
-            <span class="announcement-tag">Notice</span>
-        </div>
+        <p>
+            Loading announcements...
+        </p>
 
     </div>
 
 </section>
 
+
+<!-- =========================
+     FOOTER
+========================= -->
+
 <footer>
+
     © 2026 Anna University Student Portal
+
 </footer>
 
+
+<!-- =========================
+     JAVASCRIPT
+========================= -->
+
+<script
+    type="module"
+    src="js/announcements.js"
+></script>
+
+<script src="js/menu.js"></script>
+
 </body>
- 
+
 </html>

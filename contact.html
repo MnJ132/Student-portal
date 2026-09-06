@@ -2,100 +2,224 @@
 <html lang="en">
 
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Contact Us</title>
+    <meta charset="UTF-8">
 
-  <link rel="stylesheet" href="css/contact.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contact Us | Student Portal</title>
+
+    <link rel="stylesheet" href="css/contact.css">
 
 </head>
 
 <body>
 
+
+<!-- =========================
+     UNIVERSITY HEADER
+========================= -->
+
 <header>
 
-<h1>Anna University Student Portal</h1>
+    <h1>ANNA UNIVERSITY</h1>
 
-<p>Contact Information</p>
+    <h2>STUDENT PORTAL</h2>
 
 </header>
 
-<div class="container">
 
-<div class="card">
+<!-- =========================
+     NAVIGATION
+========================= -->
 
-<h2>📍 University Address</h2>
+<nav>
 
-<p class="info">
+    <div class="nav-top">
 
-Sardar Patel Road,<br>
+        <div class="nav-logo">
+            🎓 Student Portal
+        </div>
 
-Guindy,<br>
+        <button
+            class="menu-toggle"
+            id="menuToggle"
+            aria-label="Open navigation menu"
+        >
+            ☰
+        </button>
 
-Chennai - 600025,<br>
+    </div>
 
-Tamil Nadu, India.
 
-</p>
+    <div class="nav-links" id="navLinks">
 
-</div>
+        <a href="index.html">
+            Home
+        </a>
 
-<div class="card">
+        <a href="about.html">
+            About Us
+        </a>
 
-<h2>☎ Contact Details</h2>
+        <a href="academics.html">
+            Academics
+        </a>
 
-<p class="info"><b>Phone :</b> +91-44-2235-7004</p>
+        <a href="results.html">
+            Results
+        </a>
 
-<p class="info"><b>Examination Cell :</b> +91-44-2235-8300</p>
+        <a href="contact.html" class="active">
+            Contact
+        </a>
 
-<p class="info"><b>Email :</b> info@annauniv.edu</p>
+    </div>
 
-<p class="info"><b>Website :</b> www.annauniv.edu</p>
+</nav>
 
-</div>
 
-<div class="card">
+<!-- =========================
+     CONTACT CONTENT
+========================= -->
 
-<h2>🕒 Office Hours</h2>
+<main class="container">
 
-<p class="info">Monday - Friday</p>
 
-<p class="info">09:00 AM - 05:30 PM</p>
+    <!-- ADDRESS -->
 
-<p class="info">Saturday & Sunday : Closed</p>
+    <section class="card">
 
-</div>
+        <div class="card-icon">
+            📍
+        </div>
 
-<div class="card">
+        <h2>
+            University Address
+        </h2>
 
-<h2>Need Help?</h2>
+        <p class="info">
 
-<p>
+            Sardar Patel Road,<br>
 
-For admission, examination, semester results, certificates or student login issues,
+            Guindy,<br>
 
-please contact the University Help Desk.
+            Chennai - 600025,<br>
 
-</p>
+            Tamil Nadu, India.
 
-<br>
+        </p>
 
-<a href="index.html">
+    </section>
 
-<button>⬅ Back to Home</button>
 
-</a>
+    <!-- CONTACT DETAILS -->
 
-</div>
+    <section class="card">
 
-</div>
+        <div class="card-icon">
+            ☎️
+        </div>
 
-<div class="footer">
+        <h2>
+            Contact Details
+        </h2>
 
-© 2026 Anna University Student Portal
+        <p class="info">
+            <b>Phone:</b> +91-44-2235-7004
+        </p>
 
-</div>
+        <p class="info">
+            <b>Examination Cell:</b> +91-44-2235-8300
+        </p>
+
+        <p class="info">
+            <b>Email:</b> info@annauniv.edu
+        </p>
+
+        <p class="info">
+            <b>Website:</b> www.annauniv.edu
+        </p>
+
+    </section>
+
+
+    <!-- OFFICE HOURS -->
+
+    <section class="card">
+
+        <div class="card-icon">
+            🕒
+        </div>
+
+        <h2>
+            Office Hours
+        </h2>
+
+        <p class="info">
+            Monday - Friday
+        </p>
+
+        <p class="info">
+            09:00 AM - 05:30 PM
+        </p>
+
+        <p class="info">
+            Saturday & Sunday: Closed
+        </p>
+
+    </section>
+
+
+    <!-- HELP -->
+
+    <section class="card help-card">
+
+        <div class="card-icon">
+            💬
+        </div>
+
+        <h2>
+            Need Help?
+        </h2>
+
+        <p>
+
+            For admission, examination, semester results,
+            certificates or student login issues, please
+            contact the University Help Desk.
+
+        </p>
+
+
+        <a href="index.html" class="home-button">
+
+            ⬅ Back to Home
+
+        </a>
+
+    </section>
+
+
+</main>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    © 2026 Anna University Student Portal
+
+</footer>
+
+
+<!-- =========================
+     JAVASCRIPT
+========================= -->
+
+<script src="js/menu.js"></script>
 
 </body>
 

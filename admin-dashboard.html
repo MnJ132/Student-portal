@@ -1,51 +1,193 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
 <head>
+
+
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Admin Dashboard</title>
+
+<title>Admin Dashboard | Student Portal</title>
+
 <link rel="stylesheet" href="css/admin-dashboard.css">
+
 
 </head>
 
 <body>
 
 <header>
+    <div>
+        <h1>🎓 Student Portal Admin</h1>
+        <p>Manage students and announcements</p>
+    </div>
 
-<h1>🎓 Student Portal Admin</h1>
-
+    <button onclick="adminLogout()">Logout</button>
 </header>
 
-<div class="container">
+<main class="container">
 
-<h2>Add Student</h2>
 
-<input id="regno" placeholder="Register Number">
+<!-- =========================
+     ADD STUDENT
+========================== -->
 
-<input id="name" placeholder="Student Name">
+<section class="admin-card">
 
-<input id="dob" type="date">
+    <h2>👨‍🎓 Add Student</h2>
 
-<input id="department" placeholder="Department">
+    <input
+        id="regno"
+        type="text"
+        placeholder="Register Number"
+    >
 
-<input id="semester" placeholder="Semester">
+    <input
+        id="name"
+        type="text"
+        placeholder="Student Name"
+    >
 
-<input id="cgpa" placeholder="CGPA">
+    <input
+        id="dob"
+        type="date"
+    >
 
-<input id="percentage" placeholder="Percentage">
+    <input
+        id="department"
+        type="text"
+        placeholder="Department"
+    >
 
-<input id="total" placeholder="Total Marks">
+    <input
+        id="semester"
+        type="text"
+        placeholder="Semester"
+    >
 
-<input id="result" placeholder="PASS / FAIL">
-<button onclick="saveStudent()">
+    <input
+        id="cgpa"
+        type="number"
+        step="0.01"
+        placeholder="CGPA"
+    >
 
-Save Student
+    <input
+        id="percentage"
+        type="number"
+        placeholder="Percentage"
+    >
 
-</button>
+    <input
+        id="total"
+        type="number"
+        placeholder="Total Marks"
+    >
 
-</div>
+    <input
+        id="result"
+        type="text"
+        placeholder="PASS / FAIL"
+    >
 
-<script type="module" src="js/admin-dashboard.js"></script>
+    <button onclick="saveStudent()">
+        Save Student
+    </button>
+
+</section>
+
+
+
+<!-- =========================
+     SEARCH STUDENT
+========================== -->
+
+<section class="admin-card">
+
+    <h2>🔍 Search Student</h2>
+
+    <input
+        id="searchRegno"
+        type="text"
+        placeholder="Enter Register Number"
+    >
+
+    <button onclick="searchStudent()">
+        Search Student
+    </button>
+
+    <div id="studentResult"></div>
+
+</section>
+
+
+
+<!-- =========================
+     DELETE STUDENT
+========================== -->
+
+<section class="admin-card delete-card">
+
+    <h2>🗑️ Delete Student</h2>
+
+    <input
+        id="deleteRegno"
+        type="text"
+        placeholder="Enter Register Number"
+    >
+
+    <button onclick="deleteStudent()">
+        Delete Student
+    </button>
+
+</section>
+
+
+
+<!-- =========================
+     MANAGE ANNOUNCEMENTS
+========================== -->
+
+<section class="admin-card announcement-card">
+
+    <h2>📢 Manage Announcements</h2>
+
+    <input
+        id="announcementTitle"
+        type="text"
+        placeholder="Announcement Title"
+    >
+
+    <textarea
+        id="announcementMessage"
+        placeholder="Announcement Message"
+        rows="5"
+    ></textarea>
+
+    <button onclick="addAnnouncement()">
+        Add Announcement
+    </button>
+
+
+    <div id="adminAnnouncementsList">
+
+        <p>Loading announcements...</p>
+
+    </div>
+
+</section>
+
+
+</main>
+
+<script
+    type="module"
+    src="js/admin-dashboard.js"
+></script>
+<script type="module" src="js/admin-auth.js"></script>
 
 </body>
+
 </html>
